@@ -1,0 +1,42 @@
+<div class="container-fluid mt-5 text-center">
+    <h1 style="color:white">Extract data using excel upload</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <input class="form-control" type="file" id="formFile" (change)="fileUploaded($event)" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="text-white fs-5">Uploaded file result data (raw)</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [value]="binaryString"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="text-white fs-5">Read data the whole excel file</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [value]="workBook"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="text-white fs-5">Select and read first sheet of the whole data</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [value]="workSheet"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="text-white fs-5">Read selected sheet's data line by line and store data to (excelData)</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [value]="excelDataValue"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
